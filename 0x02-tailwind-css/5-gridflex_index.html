@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Grid and Flexbox Layout</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<style>
+		@media (max-width: 768px) {
+			main {
+				grid-template-columns: 1fr;
+			}
+		}
+	</style>
+</head>
+<body class="p-4">
+
+	<!-- header -->
+	<header class="bg-blue-500 text-white p-4">
+		<h1 class="text-3xl">Grid and Flexbox Layout</h1>
+	</header>
+
+	<!-- main grid: 1 col on small, 3 cols on lg, gap + margin + full height -->
+	<main class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4 min-h-screen">
+
+		<!-- sect spans 2 cols on lg & uses flex -->
+		<section class="lg:col-span-2 flex">
+			<!-- each flex item takes 1/2 width, bg-red, padding -->
+			<div class="w-1/2 bg-red-200 p-4">Flexbox Item 1</div>
+			<div class="w-1/2 bg-red-400 p-4">Flexbox Item 2</div>
+		</section>
+
+		<!-- sidebar in 3rd column -->
+		<aside class="bg-green-200 p-4">Sidebar</aside>
+
+	</main>
+
+	<!-- footer -->
+	<footer class="bg-gray-800 text-white p-4 mt-4">
+		<p>&copy; 2024 John Doe's Blog</p>
+	</footer>
+
+</body>
+</html>
