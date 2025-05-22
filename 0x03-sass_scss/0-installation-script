@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# 1. (Optional) Install NVM and Node 20.16 on Ubuntu
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+exit   # close shell so NVM is loaded on the next open
+# then re-open your terminal
+
+nvm install 20.16
+nvm use 20.16
+
+# 2. Install Sass globally (any OS)
+npm install -g sass@3.7.4
